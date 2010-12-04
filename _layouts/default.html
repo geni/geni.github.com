@@ -42,17 +42,21 @@
 
         <!-- begin sidebar -->
         <div class="right_col2">
-          <div class="mod xlengthy">
+          <div class="mod xlengthy basic">
             <div class="basic_hd">
+              <h4>Recent Posts</h4>
             </div>
             <div class="basic_bd">
               <ul class="post_list">
+                {% for post in site.posts limit:3 %}
+                  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
               </ul>
             </div>
-            <div class="mod basic">
-              <iframe
-                src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fgenidotcom&amp;width=260&amp;connections=8&amp;stream=false&amp;header=false&amp;height:270;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%;height:270px;padding-top:10px;" allowTransparency="false"></iframe>
-            </div>
+          </div>
+          <div class="mod basic">
+            <iframe
+              src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fgenidotcom&amp;width=260&amp;connections=8&amp;stream=false&amp;header=false&amp;height:270;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%;height:270px;padding-top:10px;" allowTransparency="false"></iframe>
           </div>
         </div>
 
